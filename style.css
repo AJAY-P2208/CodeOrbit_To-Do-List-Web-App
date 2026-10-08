@@ -1,0 +1,156 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background: #080b10;
+    color: #ffffff;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.todo-container {
+    width: 90%;
+    max-width: 600px;
+    padding: 35px;
+    background: #11161d;
+    border: 1px solid #26313c;
+    border-radius: 20px;
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.4);
+}
+
+h1 {
+    text-align: center;
+    font-size: 38px;
+    margin-bottom: 8px;
+}
+
+.subtitle {
+    text-align: center;
+    color: #9aa4b2;
+    margin-bottom: 30px;
+}
+
+.input-area {
+    display: flex;
+    gap: 10px;
+}
+
+#taskInput {
+    flex: 1;
+    padding: 14px 16px;
+    border: 1px solid #354250;
+    border-radius: 10px;
+    background: #0b1016;
+    color: white;
+    font-size: 16px;
+    outline: none;
+}
+
+#taskInput:focus {
+    border-color: #00d9ff;
+}
+
+#addTaskBtn {
+    padding: 14px 20px;
+    border: none;
+    border-radius: 10px;
+    background: #00d9ff;
+    color: #061016;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+#addTaskBtn:hover {
+    transform: translateY(-2px);
+}
+
+#taskList {
+    list-style: none;
+    margin-top: 25px;
+}
+
+#taskList li {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 15px;
+    padding: 15px;
+    margin-bottom: 12px;
+    background: #0b1016;
+    border: 1px solid #26313c;
+    border-radius: 10px;
+}
+
+.task-text {
+    flex: 1;
+    word-break: break-word;
+}
+
+.completed {
+    text-decoration: line-through;
+    color: #6f7882;
+}
+
+.task-buttons {
+    display: flex;
+    gap: 8px;
+}
+
+.complete-btn,
+.delete-btn {
+    border: none;
+    padding: 8px 12px;
+    border-radius: 7px;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+.complete-btn {
+    background: #1f9d55;
+    color: white;
+}
+
+.delete-btn {
+    background: #d64545;
+    color: white;
+}
+
+@media (max-width: 600px) {
+
+    .todo-container {
+        width: 92%;
+        padding: 25px 18px;
+    }
+
+    h1 {
+        font-size: 30px;
+    }
+
+    .input-area {
+        flex-direction: column;
+    }
+
+    #addTaskBtn {
+        width: 100%;
+    }
+
+    #taskList li {
+        align-items: flex-start;
+        flex-direction: column;
+    }
+
+    .task-buttons {
+        width: 100%;
+    }
+
+    .complete-btn,
+    .delete-btn {
+        flex: 1;
+    }
+}
